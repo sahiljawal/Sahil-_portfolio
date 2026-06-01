@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+transition:0.3s;
+}
+
+.navbar{
+position:sticky;
+top:0;
+background:#222;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:15px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+header{
+background:#222;
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+.profile-pic{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid white;
+margin-bottom:15px;
+}
+
+#themeBtn{
+padding:10px 20px;
+margin-top:15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.projects{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.project{
+flex:1;
+min-width:250px;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+progress{
+width:100%;
+height:20px;
+margin-bottom:10px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+
+.dark{
+background:#111;
+color:white;
+}
+
+.dark .card,
+.dark .project{
+background:#222;
+color:white;
+}
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.projects{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<h2>Sahil Portfolio</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<header>
+
+<img src="profile.jpg" alt="Profile" class="profile-pic">
+
+<h1>👨‍💻 Sahil Jawal</h1>
+
+<p>Web Developer | JavaScript Learner</p>
+
+<button id="themeBtn" onclick="toggleMode()">
+🌙 Dark Mode
+</button>
+
+</header>
+
+<section>
+
+<div class="card" id="about">
+
+<h2>🙋 About Me</h2>
+
+<p>
+I am learning HTML, CSS and JavaScript.
+I enjoy building websites and web applications.
+</p>
+
+</div>
+
+<div class="card" id="skills">
+
+<h2>🛠 Skills</h2>
+
+<p>HTML</p>
+<progress value="90" max="100"></progress>
+
+<p>CSS</p>
+<progress value="85" max="100"></progress>
+
+<p>JavaScript</p>
+<progress value="80" max="100"></progress>
+
+</div>
+
+<div class="card" id="projects">
+
+<h2>📂 Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>📝 Notes App</h3>
+<p>Notes with Local Storage.</p>
+</div>
+
+<div class="project">
+<h3>💰 Expense Tracker</h3>
+<p>Track expenses easily.</p>
+</div>
+
+<div class="project">
+<h3>🛒 Shopping Cart</h3>
+<p>Add and remove products.</p>
+</div>
+
+<div class="project">
+<h3>🎵 Music Player</h3>
+<p>Play and pause songs.</p>
+</div>
+
+<div class="project">
+  <h3>🧮 EMI Calculator</h3>
+  <p>Calculate monthly EMI instantly.</p>
+</div>
+
+<div class="project">
+  <h3>⏱ Stopwatch</h3>
+  <p>Start, stop and reset timer.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card" id="contact">
+
+<h2>📞 Contact</h2>
+
+<p>Email: sahil@example.com</p>
+
+<br>
+
+<button onclick="sayHello()">
+👋 Say Hello
+</button>
+
+<button onclick="openGithub()">
+🔗 GitHub
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sahil Portfolio 🚀
+
+</footer>
+
+<script>
+
+function toggleMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+function sayHello(){
+
+alert("Thanks for visiting my portfolio! 🚀");
+
+}
+
+function openGithub(){
+
+window.open(
+"https://github.com/",
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
